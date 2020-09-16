@@ -88,4 +88,30 @@ var Matematica = /*#__PURE__*/function () {
   return Matematica;
 }();
 
-console.log(Matematica.soma(4, 3));
+console.log(Matematica.soma(4, 3)); //Manipulando arrays
+
+var arr = [1, 3, 4, 5, 8, 9, 10, 12];
+/*
+const newArr = arr.map(function(item){
+    return item *2;
+})
+*/
+
+var newArr = arr.map(function (item, index) {
+  return item + index;
+});
+console.log(newArr);
+var sum = arr.reduce(function (total, next) {
+  return total + next;
+});
+console.log(sum);
+var filter = arr.filter(function (item) {
+  return item % 2 === 0;
+});
+console.log(filter);
+var num = 3; // essa variavel foi ideia minha para testar se funcionaria, e funcionou :)
+
+var find = arr.find(function (item) {
+  return item === num;
+});
+console.log(find);
